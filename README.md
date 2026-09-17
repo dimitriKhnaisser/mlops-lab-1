@@ -22,3 +22,11 @@
 
 > Question 5: Do you see a .dvc file? What does it contain?  
     Yes, a data.dvc file is created after running dvc add data. It contains metadata about the data folder, including its path and a hash (MD5) that identifies the exact version of the data. It acts as a pointer to the data stored by DVC rather than containing the actual dataset itself.
+> Question 6: You can check your main branch on the github web UI. Is the code there? Is the data there? Do you have any file that points to the data location. And what about dagshub web UI do you see the data? 
+    Yes, the code and project files are visible on the GitHub repository. The actual dataset is not stored on GitHub because it is managed by DVC. The data.dvc file acts as a pointer/metadata file that identifies the tracked data and its version.
+> Question 7: In a completely new temporary folder clone your github repo. Do you see the data folder? What dvc command is needed to get the data folder?
+    After cloning the GitHub repository into a new temporary folder, the data folder is not present because Git only stores the DVC pointer file, not the actual dataset.
+
+    The DVC command needed to retrieve the data is:
+    dvc pull
+    This downloads the tracked data from the configured DVC remote into the data folder.
