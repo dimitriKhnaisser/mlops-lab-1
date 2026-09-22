@@ -39,3 +39,10 @@
     The DVC command needed to retrieve the data is:
     dvc pull
     This downloads the tracked data from the configured DVC remote into the data folder.
+
+
+
+> Question 8: Do you still see the new folders you created? food11_processed and food11_processed_mini?
+    No. After checking out the previous commit and running `dvc checkout`, the `food11_processed` and `food11_processed_mini` folders are no longer present because they were added in a later version of the data.
+
+    After checking out the `main` branch again and running `dvc checkout`, the folders are restored because the latest version of `data.dvc` points to the version containing the processed datasets.
