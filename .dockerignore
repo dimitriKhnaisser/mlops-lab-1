@@ -7,5 +7,7 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
-.vscode/
-.env
+.pytest_cache/
+.mypy_cache/
+.gitignore
+README.md
